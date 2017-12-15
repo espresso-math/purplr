@@ -1,0 +1,10 @@
+<h2><strong>News & Updates</strong></h2>
+<div class='wrapbox'>
+<ul>
+  {% for post in site.posts limit:3 %} {% if post.newsfeed %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endif %}{% endfor %}
+</div>
+</ul>
