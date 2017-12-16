@@ -10,4 +10,3 @@ iis_slider_array: []
 markdown: kramdown
 plugins:
   - jekyll-feed
-  - jekyll-admin
