@@ -12,8 +12,7 @@ strong {
 	display: block;
 	background-color: white;
 	max-width: 60%;
-	padding: 5px;
-	margin: 5px;}
+	padding: 5px;}
 	h1, h2, h3, h4 {
 		font-family: $display-font-family;
 	}
@@ -24,7 +23,13 @@ strong {
 			font-size: $display-font-size;
 			font-weight: 600;
 			margin-top: 25px;}
-		max-height: 200px; }
+		max-height: 200px; 
+		.notsomuch {
+			max-width: 60%;}
+			@include media-query($on-palm) {
+				.notsomuch { max-width: 100%;}
+			}
+		}
 	.logogram {
 		h1 { 
 			font-family: $display-font-family;
@@ -94,3 +99,37 @@ strong {
 }
 body {
 }
+
+// Page and Post background
+.page-two-content, .post-content {
+	display: block;
+	background-color: white;
+	min-height: 800px;
+	padding: 25px;
+	.post-title {
+		font-weight: 600;
+	}
+}
+
+// Hide the sidebar on mobile devices and remove a lot of margins
+
+@include media-query($on-palm) {
+	.sidebar { display: none;}
+	.logogram {
+		h1,h2 {margin-left: 0px !important;}
+	}
+	// Hidden button
+	.logogram {.strongholder {float: left;}}
+	.menubarbutton {
+		display: block !important;
+		float: right;
+		margin-top: 25px;
+		height: 40px;
+		width: 40px;
+		border: none;
+		border-radius: 5px;
+		background-color: white;
+	}
+}
+
+

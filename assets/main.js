@@ -15,3 +15,10 @@ var granimInstance = new Granim({
         }
     }
 });
+
+// Menu display
+
+function showmenubar() {
+	$('main').css("display", "none");
+	$('.menubar').css("display", "block");
+}
