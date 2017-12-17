@@ -134,7 +134,7 @@ body {
 		h1,h2 {margin-left: 0px !important;}
 	}
 	// Hidden button
-	.logogram {h1 {font-size: $display-font-size * 5}}
+	.logogram {h1 {font-size: $display-font-size * 5 !important;}}
 	.menubarbutton {
 		display: block !important;
 		height: 40px;
