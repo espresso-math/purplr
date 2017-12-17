@@ -65,7 +65,7 @@ strong { // Show a white highlight around text
 			line-height: 1;
 			letter-spacing: 2px;
 			margin: $spacing-unit;}
-		h2 { margin: $spacing-unit;}}
+		h2 { margin: $spacing-unit; }}
 }
 
 /* Positioning */
@@ -75,13 +75,11 @@ strong { // Show a white highlight around text
 	@include grid(8, 4);
 	.gallery {min-height: 60%;} // Just the front page
 	margin-bottom: $spacing-unit;
-	.sidelinks {margin: $spacing-unit;} // Responsive
+	.sidelinks, .searchbox {margin: $spacing-unit;} // Responsive
 }
 
 .searchme {
-	margin: 10px;
 	margin-top: 0;
-	margin-left: 25px;
 	.search {
 	   padding:8px 15px;
 	   height: 30px;
@@ -99,7 +97,7 @@ strong { // Show a white highlight around text
 
 .three-more-cols {
 	@include grid(8, 4);
-	.first {min-height: 200px; margin: $spacing-unit;}
+	.first {min-height: 200px; margin-top: $spacing-unit;}
 	margin-bottom: $spacing-unit;
 }
 
