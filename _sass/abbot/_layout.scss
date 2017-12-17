@@ -125,6 +125,8 @@ strong { // Show a white highlight around text
 	.logogram {
 		h1,h2 {margin-left: $spacing-unit !important;}
 	}
+	.newsbox {margin-left: $spacing-unit;}
+	
 	// The canvas
 	#diecanvas {height: 70%;}
 	// Hidden button
