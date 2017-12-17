@@ -97,7 +97,7 @@ strong { // Show a white highlight around text
 
 .three-more-cols {
 	@include grid(8, 4);
-	.first {min-height: 200px; margin-top: $spacing-unit;}
+	.first {min-height: 200px; margin: $spacing-unit;}
 	margin-bottom: $spacing-unit;
 }
 
@@ -123,7 +123,7 @@ strong { // Show a white highlight around text
 	.searchme { display: none;}
 	.sidelinks { margin-left: none; display: none;}
 	.logogram {
-		h1,h2 {margin-left: 0px !important;}
+		h1,h2 {margin-left: $spacing-unit !important;}
 	}
 	// The canvas
 	#diecanvas {height: 70%;}
