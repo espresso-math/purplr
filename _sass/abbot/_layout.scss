@@ -16,6 +16,25 @@ strong {
 	h1, h2, h3, h4 {
 		font-family: $display-font-family;
 	}
+	
+// Links are highlighted
+.stylized {
+	ul {list-style: none; margin: 0; padding: 0;}
+	li {margin-bottom: 5px;}
+	a {
+		text-decoration: none;
+		color: $text-color;
+		background-color: white;
+		padding: 4px;
+		&:hover {
+			text-decoration: none;
+			background-color: #FFF94E;
+			color: $text-color;
+		}}
+}
+li {
+	text-decoration: none;
+}
 .news-and-logogram {
 	@include grid(8, 4);
 	.news { 
@@ -24,11 +43,6 @@ strong {
 			font-weight: 600;
 			margin-top: 25px;}
 		max-height: 200px; 
-		.notsomuch {
-			max-width: 60%;}
-			@include media-query($on-palm) {
-				.notsomuch { max-width: 100%;}
-			}
 		}
 	.logogram {
 		h1 { 
@@ -48,13 +62,14 @@ strong {
 // Sidebar
 .gallery-and-sidebar {
 	@include grid(8, 4);
-	.gallery {height: 400px;}
-	.sidebar {height: 400px;}
+	.gallery {max-height: 400px;}
+	.sidebar {max-height: 400px;}
 	margin-bottom: 10px;
 }
 .sidebar {
 	.searchme {
 		margin: 10px;
+		margin-top: 0;
 		margin-left: 25px;
 		.search {
 		   padding:8px 15px;
@@ -90,7 +105,7 @@ strong {
     position: absolute;
     display: block;
     width: 100%;
-    height: 100vh;
+    height: 120%;
     top: 0;
     right: 0;
     bottom: 0;
