@@ -62,9 +62,12 @@ li {
 // Sidebar
 .gallery-and-sidebar {
 	@include grid(8, 4);
-	.gallery {max-height: 400px;}
+	.gallery {min-height: 60%;}
 	.sidebar {max-height: 400px;}
 	margin-bottom: 10px;
+	.sidelinks {
+		margin-left: 25px; // Responsive
+	}
 }
 .sidebar {
 	.searchme {
@@ -130,11 +133,11 @@ body {
 
 @include media-query($on-palm) {
 	.sidebar { display: none;}
+	.sidelinks { margin-left: none;}
 	.logogram {
 		h1,h2 {margin-left: 0px !important;}
 	}
 	// Hidden button
-	.logogram {h1 {font-size: $display-font-size * 3.5 !important;}}
 	.menubarbutton {
 		display: block !important;
 		height: 40px;
