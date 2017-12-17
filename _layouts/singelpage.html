@@ -5,16 +5,15 @@
 
   <body>
 
-
-		<canvas id="diecanvas"></canvas>
+	<canvas id="diecanvas"></canvas>
     <main class="page-content" aria-label="Content">
 		
       <div class="wrapper">
 		<div class="news-and-logogram">
 			<div class="news">{% include home/news-feed.html %}</div>
-			<div class="logogram">{% include home/logogram.html %}<div class="sidebar">{% include home/sidebar.html %}</div></div>
+			<div class="logogram">{% include home/logogram.html %}<div class="searchbox">{% include home/sidebar.html %}</div></div>
 		</div>
-		<div class="gallery-and-sidebar wrapbox">
+		<div class="content-and-sidebar wrapbox">
 			<div class="gallery">{% include home/gallery.html %}</div>
 			<div class="sidebar">
 				<div class="sidelinks">
@@ -25,7 +24,7 @@
 		<div class="three-more-cols">
 			<div class="first">
 				<h2><strong>Recent Posts</strong></h2>
-				<div class="stylized">
+				<div class="stylized-list">
 				<ul>
 				  {% for post in site.posts limit:4 %} {% if post %}
 				    <li>
@@ -39,7 +38,7 @@
 			</div>
 		</div>
 		<div class="aminimalisticfooter">
-			<p>Copyright &copy; 2017-2018</p>
+			<p><strong>Powered by <a href="https://jekyllrb.com/">Jekyll. </a>Copyright &copy; 2017-2018</strong></p>
 		</div>
 		
       </div>
