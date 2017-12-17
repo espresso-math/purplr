@@ -6,16 +6,27 @@
   <body>
 
 
+		<canvas id="diecanvas"></canvas>
     <main class="page-content" aria-label="Content">
 		
       <div class="wrapper">
 		<div class="news-and-logogram">
 			<div class="news">{% include home/news-feed.html %}</div>
-			<div class="logogram">{% include home/logogram.html %}</div>
+			<div class="logogram">{% include home/logogram.html %}<div class="sidebar">{% include home/sidebar.html %}</div></div>
 		</div>
-		<div class="gallery-and-sidebar">
+		<div class="gallery-and-sidebar wrapbox">
 			<div class="gallery">{% include home/gallery.html %}</div>
-			<div class="sidebar">{% include home/sidebar.html %}</div>
+			<div class="first">
+				<h2><strong>Recent Posts</strong></h2>
+				<div class="stylized">
+				<ul>
+				  {% for post in site.posts limit:4 %} {% if post %}
+				    <li>
+				      <a href="{{ post.url }}"><i class="fa fa-hashtag" aria-hidden="true"></i> {{ post.title }}</a>
+				    </li>
+				  {% endif %}{% endfor %}
+				</ul>
+			</div>
 		</div>
 		<div class="three-more-cols">
 			<div class="first">
