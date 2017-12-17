@@ -55,7 +55,7 @@ li {
 		h2 { margin: 25px;}
 		.strongholder {
 		}
-		max-height: 200px;}
+		max-height: 250px;}
 	margin-bottom: 10px;
 }
 
@@ -134,12 +134,11 @@ body {
 		h1,h2 {margin-left: 0px !important;}
 	}
 	// Hidden button
-	.logogram {.strongholder {float: left;}}
+	.logogram {.strongholder {}}
 	.menubarbutton {
 		display: block !important;
-		float: right;
-		margin-top: 25px;
 		height: 40px;
+		float: right;
 		width: 40px;
 		border: none;
 		border-radius: 5px;
