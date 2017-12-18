@@ -65,7 +65,8 @@ strong { // Show a white highlight around text
 			font-size: $display-font-size * 2.5;
 			line-height: 1;
 			letter-spacing: 2px;
-			margin: $spacing-unit;}
+			margin: $spacing-unit;
+			margin-top: $spacing-unit * 1.5;}
 		h2 { margin: $spacing-unit; }}
 }
 
