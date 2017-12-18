@@ -2,6 +2,8 @@
 layout: post
 ---
 
+<div class="searchpage-searchbar">{% include home/sidebar.html %}<br></div>
+
 <h2><strong>Search Results</strong></h2>
 <section id="search-results" style="display: none;"> </section>
 

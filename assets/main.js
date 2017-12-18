@@ -18,10 +18,16 @@ var granimInstance = new Granim({
 
 // Menu display
 
-function showmenubar() {
+
+$('.menushowbutton').on('click', function () {
 	$('main').css("display", "none");
-	$('.menubar').css("display", "block");
-}
+	$('.menushow').css("display", "block");
+});
+$('.closemenu').on('click', function () {
+	$('.menushow').css("display", "none");
+	$('main').css("display", "block");
+});
+
 
 $(function() {
     $('#search-query').lunrSearch({
