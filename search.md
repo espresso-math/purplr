@@ -1,10 +1,24 @@
 ---
-layout: singelpage
+layout: post
 ---
 
-<form action="/search" method="get">
-  <input type="text" id="search-query" name="q" placeholder="Search" autocomplete="off">
-</form>
-
+<h2><strong>Search Results</strong></h2>
 <section id="search-results" style="display: none;"> </section>
- <script src="{{ "/assets/search.min.js" | relative_url }}" type="text/javascript" charset="utf-8"></script>
+
+{% raw %}
+<script id="search-results-template" type="text/mustache">
+  {{#entries}}
+    <article>
+      <h3>
+        {{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}}
+        <a href="{{url}}">{{title}}</a>
+      </h3>
+      {{#is_post}}
+      <ul>
+        {{#tags}}<li>{{.}} </li>{{/tags}}
+      </ul>
+      {{/is_post}}
+    </article>
+  {{/entries}}
+</script>
+{% endraw %}

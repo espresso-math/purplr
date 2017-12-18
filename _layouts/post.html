@@ -14,7 +14,7 @@
 			<div class="logogram">{% include home/logogram.html %}</div>
 		</div>
 		<div class="content-and-sidebar wrapbox">
-			<div class="post-content"><h2 class="post-title">{{ page.title }}</h2>{{ content }}</div>
+			<div class="post-content">{% if page.title %}<h2 class="post-title">{{ page.title }}</h2>{% endif %}{{ content }}</div>
 			<div class="sidebar">
 				<div class="searchbox">{% include home/sidebar.html %}</div>
 				<div class="sidelinks">

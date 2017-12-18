@@ -10,3 +10,4 @@ iis_slider_array: []
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-lunr-js-search
