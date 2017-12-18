@@ -5,6 +5,7 @@ github_username:  jekyll
 
 title: An (Un)official Website - Integrated Science Education and Research Centre (ISERC) 
 
+permalink: /:categories/post/:slug
 # Build settings
 iis_slider_array: []
 markdown: kramdown
