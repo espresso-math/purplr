@@ -50,7 +50,7 @@ strong { // Show a white highlight around text
 
 // Title Bar
 .news-and-logogram {
-	@include grid(8, 4);
+	@include grid(9, 3);
 	margin-bottom: $spacing-unit;
 	.news { 
 		h2 { 
@@ -67,14 +67,14 @@ strong { // Show a white highlight around text
 			letter-spacing: 2px;
 			margin: $spacing-unit;
 			margin-top: $spacing-unit * 1.5;}
-		h2 { margin: $spacing-unit; }}
+		h2 { margin: $spacing-unit; font-size: $display-font-size * 0.8; }}
 }
 
 /* Positioning */
 
 // Main content area
 .content-and-sidebar {
-	@include grid(8, 4);
+	@include grid(9, 3);
 	.gallery {min-height: 60%;} // Just the front page
 	margin-bottom: $spacing-unit;
 	.sidelinks, .searchbox {margin: $spacing-unit;} // Responsive
