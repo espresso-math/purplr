@@ -4,48 +4,55 @@
   {% include head.html %}
 
   <body>
+   	<main class="page-content" aria-label="Content">
+      	<section class="menubar">
+	      	<div class="titlebox">
+	      		<a href="{{ "/" | relative_url }}"><strong>ISE</strong><br><strong>RC</strong></a>
+	      	</div>
+	      	<div class="menuitems">
+	      		<ul>
+	      			<li><a href="#">Alef <i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
+	      			<li><a href="#">Bet <i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
+	      			<li><a href="#">Gimel <i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
+	      			<li><a href="#">Dalet <i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
+	      			<li><a href="#">He <i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
+	      		</ul>
+	      	</div>
+	      	<div class="searchicon"><i class="fa fa-search fa-lg" aria-hidden="true"></i></div>
+	      	<div class="menuicon"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></div>
+	    </section>
+	    <div class="mobileitems">
+	      		<ul>
+	      			<li><a href="#">Alef</li>
+	      			<li><a href="#">Bet</li>
+	      			<li><a href="#">Gimel</li>
+	      			<li><a href="#">Dalet</li>
+	      			<li><a href="#">He</a></li>
+	      			<li><a href="/search">Search</a></li>
+	      		</ul>
+	    </div>
+	    <section class="news">
+	    	<h2>News & Updates</h2>
+	    	<ul>
+			  	{% for post in site.posts %} {% if post.newsfeed %}
+			    <li>
+			    	<a href="{{ post.url }}">{{ post.title }}</a>
+			    </li>
+			  	{% endif %}{% endfor %}
+			  	<li><a href="{{ "/posts" | relative_url }}">more</a></li>
+			</ul>
+	    </section>
+	    <section class="quoteoftheday">
+	    	<h2>Quote</h2>
+	    	<blockquote>"Raven desk forevermore."</blockquote>
+	    </section>
+	    <article class="onegoodarticle">
+	    	<h1>One Dumb Article</h1>
+	    	Many early New Yorker cartoonists did not caption their own cartoons. In his book The Years with Ross, Thurber describes the newspaper's weekly art meeting, where cartoons submitted over the previous week would be brought up from the mail room to be gone over by Ross, the editorial department, and a number of staff writers. Cartoons often would be rejected or sent back to artists with requested amendments, while others would be accepted and captions written for them. Some artists hired their own writers; Helen Hokinson hired James Reid Parker in 1931. (Brendan Gill relates in his book Here at The New Yorker that at one point in the early 1940s, the quality of the artwork submitted to the magazine seemed to improve. It later was found out that the office boy (a teen-aged Truman Capote) had been acting as a volunteer art editor, dropping pieces he didn't like down the far edge of his desk.)[25]
 
-	<canvas id="diecanvas"></canvas>
-    <main class="page-content" aria-label="Content">
-		
-      <div class="wrapper">
-		<div class="news-and-logogram">
-			<div class="news">{% include home/news-feed.html %}</div>
-			<div class="logogram">{% include home/logogram.html %}</div>
-		</div>
-		<div class="content-and-sidebar wrapbox">
-			<div class="post-content">{% if page.title %}<h2 class="post-title">{{ page.title }}</h2>{% endif %}{{ content }}</div>
-			<div class="sidebar">
-				<div class="searchbox">{% include home/sidebar.html %}</div>
-				<div class="sidelinks">
-				{% include home/links.html %}
-				</div>
-			</div>
-		</div>
-		<div class="three-more-cols">
-			<div class="first">
-				<h2><strong>Recent Posts</strong></h2>
-				<div class="stylized-list">
-				<ul>
-				  {% for post in site.posts limit:4 %} {% if post %}
-				    <li>
-				      <a href="{{ post.url }}"><i class="fa fa-hashtag" aria-hidden="true"></i> {{ post.title }}</a>
-				    </li>
-				  {% endif %}{% endfor %}
-				</ul>
-				</div>
-			</div>
-			<div class="second">
-			</div>
-		</div>
-		<div class="aminimalisticfooter">
-			<p><strong>Powered by <a href="https://jekyllrb.com/">Jekyll. </a>Copyright &copy; 2017-2018</strong></p>
-		</div>
-		
-      </div>
+Several of the magazine's cartoons have climbed to a higher plateau of fame. One 1928 cartoon drawn by Carl Rose and captioned by E. B. White shows a mother telling her daughter, "It's broccoli, dear." The daughter responds, "I say it's spinach and I say the hell with it." The phrase "I say it's spinach" entered the vernacular (and three years later, the Broadway musical Face the Music included Irving Berlin's musical number entitled "I Say It's Spinach (And The Hell With It)").[26] The catchphrase "back to the drawing board" originated with the 1941 Peter Arno cartoon showing an engineer walking away from a crashed plane, saying, "Well, back to the old drawing board."[27][28]
+	    </article>
     </main>
-		
-
 		{% include scripts-at-the-bottom.html %}
   </body>
 
