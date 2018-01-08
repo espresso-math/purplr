@@ -30,7 +30,21 @@
 	      			<li><a href="#">He</a></li>
 	      		</ul>
 	    </div>
-	    <section class="placeholder"></section>
+	    <section class="news">
+	    	<h2>News & Updates</h2>
+	    	<ul>
+			  	{% for post in site.posts %} {% if post.newsfeed %}
+			    <li>
+			    	<a href="{{ post.url }}">{{ post.title }}</a>
+			    </li>
+			  	{% endif %}{% endfor %}
+			  	<li><a href="{{ "/posts" | relative_url }}">more</a></li>
+			</ul>
+	    </section>
+	    <section class="quoteoftheday">
+	    	<h2>Quote</h2>
+	    	<blockquote>"Raven desk forevermore."</blockquote>
+	    </section>
     </main>
 		{% include scripts-at-the-bottom.html %}
   </body>

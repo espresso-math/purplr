@@ -96,8 +96,28 @@ strong { // Show a white highlight around text
 
 
 
-
-
+/* News Section */
+.news {
+	width: 55%;
+	background-color: #FFF1C1;
+	text-align: right;
+	ul {list-style-type: none;}
+	a { color: $text-color; text-decoration: none; &:hover, :visited {text-decoration: none}}
+	float: left;
+	margin: 0;
+	padding: 5px;
+	height: $spacing-unit * 7;
+}
+.quoteoftheday {
+	width: 45%;
+	float: right;
+	background-color: #F38181;
+	color: $background-color;
+	padding: 5px;
+	margin: 0;
+	height: $spacing-unit * 7;
+}
+/* End Section*/
 
 
 .placeholder {height: 2000px;}
