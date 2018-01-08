@@ -58,7 +58,29 @@ strong { // Show a white highlight around text
 	right: $spacing-unit * 3;
 	font-size: $display-font-size;
 }
+
+.menuicon {
+	display: none;
+	position: absolute;
+	top: 95px;
+	right: $spacing-unit*3;
+	font-size: $display-font-size;
+	color: $text-color;
+}
+
+@include media-query($on-laptop) {
+	.menuitems {display: none;}
+	.searchicon {display: none;}
+	.menuicon {display: inline-block;}
+}
 /* END Menubar Styling */
+
+
+
+
+
+
+
 
 
 .placeholder {height: 2000px;}
