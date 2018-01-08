@@ -1,15 +1,67 @@
-// Front Page Design
+/* Common Layout */
 
-// Flair
+/* Normalising somewhat */
+/* End norm */
+
+// Add some flair
 strong { // Show a white highlight around text
 	font-weight: 800;
-	background-color: white;
-	padding-left: 6px;
+	background-color: #F38181;
+	padding-left: 10px;
 	padding-top: 2px;
 	padding-bottom: 2px;
-	padding-right: 6px;
+	padding-right: 10px;
 }
-	
+
+/* Menubar STyLing */
+.titlebox {
+	a {text-decoration: none; color: white; &:hover, &:visited {text-decoration: none;}}
+	font-family: $display-font-family;
+	font-weight: 800;
+	font-size: $display-font-size * 6;
+	line-height: 1;
+	letter-spacing: 2px;
+	display: inline-block;
+}
+
+.menubar {
+	background-color: $background-color;
+	margin: 0; // Fush against the top
+	background-color: #FFF1C1;
+	overflow: hidden;
+	height: 250px;
+	min-width: 100%;
+}
+
+.menuitems {
+	display: inline-block;
+	position: absolute;
+	top: 105px;
+	margin-left: $spacing-unit * 5;
+	ul {list-style-type: none;}
+	li { 
+		display: inline;
+		padding-right: $spacing-unit * 5;
+		a {
+			text-decoration: none;
+			&:hover, :visited {text-decoration: none;}
+			font-size: 2vw;
+			color: $text-color;
+		}
+	}
+}
+
+.searchicon {
+	display: inline-block;
+	position: absolute;
+	top: 105px;
+	right: $spacing-unit * 3;
+	font-size: $display-font-size;
+}
+/* END Menubar Styling */
+
+
+.placeholder {height: 2000px;}
 .wrapbox { // shows a white box
 	border: none;
 	display: block;
@@ -57,17 +109,7 @@ strong { // Show a white highlight around text
 			font-size: $display-font-size;
 			font-weight: 600;
 			margin-top: $spacing-unit;}}
-	.logogram {
-		h1 { 
-			a {text-decoration: none; color: inherit; &:hover, &:visited {text-decoration: none;}}
-			font-family: $display-font-family;
-			font-weight: 800;
-			font-size: $display-font-size * 2.5;
-			line-height: 1;
-			letter-spacing: 2px;
-			margin: $spacing-unit;
-			margin-top: $spacing-unit * 1.5;}
-		h2 { margin: $spacing-unit; font-size: $display-font-size * 0.8; }}
+	
 }
 
 /* Positioning */
