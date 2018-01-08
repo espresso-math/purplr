@@ -99,6 +99,7 @@ body {background-color: #FFF1C1}
 
 /* News Section */
 .news {
+	font-size: 1.5em;
 	width: 55%;
 	background-color: #FFF1C1;
 	text-align: right;
@@ -108,14 +109,17 @@ body {background-color: #FFF1C1}
 	float: left;
 	margin: 0;
 	padding: 5px;
+	padding-right: $spacing-unit/2;
 	height: 260px;
 }
 .quoteoftheday {
+	font-size: 1.5em;
 	width: 45%;
 	float: right;
 	background-color: #F38181;
 	color: $background-color;
 	padding: 5px;
+	padding-left: $spacing-unit/2;
 	margin: 0;
 	height: 260px;
 }
@@ -125,9 +129,14 @@ body {background-color: #FFF1C1}
 
 /* Article */
 .onegoodarticle {
+	display: inline-block;
 	max-width: $content-width;
-	margin: 0 auto;
+	margin-left: $content-width/3;
 	padding: $spacing-unit;
+}
+
+@include media-query($on-laptop) {
+	.onegoodarticle {margin: auto;}
 }
 /* End article */
 
