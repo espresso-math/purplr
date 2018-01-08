@@ -100,12 +100,13 @@ body {background-color: #FFF1C1}
 /* News Section */
 .news {
 	font-size: 1.5em;
-	width: 55%;
+	width: 50%;
 	background-color: #FFF1C1;
 	text-align: right;
 	ul {list-style-type: none;}
 	li {padding-right: 5px;}
-	a { color: $text-color; text-decoration: none; &:hover, :visited {text-decoration: none}}
+	a { color: $text-color; text-decoration: none; &:hover, :visited {text-decoration: underline;}}
+	h2 {line-height: 1.3}
 	float: left;
 	margin: 0;
 	padding: 5px;
@@ -114,7 +115,7 @@ body {background-color: #FFF1C1}
 }
 .quoteoftheday {
 	font-size: 1.5em;
-	width: 45%;
+	width: 50%;
 	float: right;
 	background-color: #F38181;
 	color: $background-color;
@@ -125,6 +126,52 @@ body {background-color: #FFF1C1}
 }
 /* End Section*/
 
+/* Searchmenu show */
+.searchmenu {
+	display: none;
+	max-width: 100%;
+	background-color: #F38181;
+	height: 100px;
+	input {
+		border: none;
+		background-color: #F38181;
+		height: 50px;
+		margin-top: 25px;
+		width: 250px;
+		margin-left: 250px;
+		display: inline-block;
+		&:focus {
+			outline: none;
+		}
+		font-size: $display-font-size;
+		font-family: $base-font-family;
+		color: $background-color;
+		letter-spacing: 3px;
+		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+ 			 color: $background-color;
+		}
+		&::-moz-placeholder { /* Firefox 19+ */
+  			color: $background-color;
+		}
+		&:-ms-input-placeholder { /* IE 10+ */
+  			color: $background-color;
+		}
+		&:-moz-placeholder { /* Firefox 18- */
+  			color: $background-color;
+		}
+
+	}
+
+}
+@include media-query($on-laptop) {
+	.searchmenu {
+		input {
+			position: absolute;
+			left: -150px;
+		}
+	}
+}
+/* End section */
 
 
 /* Article */
@@ -133,6 +180,12 @@ body {background-color: #FFF1C1}
 	max-width: $content-width;
 	margin-left: $content-width/3;
 	padding: $spacing-unit;
+	h1, h2, h3, h4 {
+		font-size: $display-font-size * 1.5;
+	}
+	p {
+		font-size: $base-font-size * 1.2;
+	}
 }
 
 @include media-query($on-laptop) {

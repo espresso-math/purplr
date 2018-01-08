@@ -18,4 +18,12 @@ $(document).ready(function() {
     $('.mobileitems').slideToggle(100);
     return false;
   });
+  $('.searchicon').click(function() {
+    $('.searchmenu').slideToggle(100);
+    return false;
+  });
+  $('.mobilesearch').click(function() {
+    $('.searchmenu').slideToggle(100);
+    return false;
+  });
 });
