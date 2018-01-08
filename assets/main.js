@@ -1,32 +1,4 @@
-new IdealImageSlider.Slider('#slider');
-
-var granimInstance = new Granim({
-    element: '#diecanvas',
-    name: 'basic-gradient',
-    direction: 'left-right', // 'diagonal', 'top-bottom', 'radial'
-    opacity: [1, 1],
-    isPausedWhenNotInView: true,
-    states : {
-        "default-state": {
-            gradients: [
-				['#9D50BB', '#6E48AA'],
-                ['#4776E6', '#8E54E9']
-            ]
-        }
-    }
-});
-
 // Menu display
-
-
-$('.menushowbutton').on('click', function () {
-	$('main').css("display", "none");
-	$('.menushow').css("display", "block");
-});
-$('.closemenu').on('click', function () {
-	$('.menushow').css("display", "none");
-	$('main').css("display", "block");
-});
 
 
 $(function() {
@@ -38,3 +10,12 @@ $(function() {
       emptyMsg  : '<p>Nothing found.</p>'     // shown message if search returns no results
     });
   });
+
+
+
+$(document).ready(function() {
+  $('.menuicon').click(function() {
+    $('.mobileitems').slideToggle(100);
+    return false;
+  });
+});
