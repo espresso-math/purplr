@@ -1,26 +1,24 @@
 ---
-layout: post
+layout: onelayout
+title: Search page
+htmltitle: <a href="/"><strong>F<i class="fa fa-question" aria-hidden="true"></i><i class="fa fa-question" aria-hidden="true"></i></strong><br><strong><i class="fa fa-question" aria-hidden="true"></i>D</strong></a>
 ---
-
-<div class="searchpage-searchbar">{% include home/sidebar.html %}<br></div>
-
-<h2><strong>Search Results</strong></h2>
+## Search Result
 <section id="search-results" style="display: none;"> </section>
 
 {% raw %}
 <script id="search-results-template" type="text/mustache">
   {{#entries}}
-    <article>
-      <h3>
-        {{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}}
-        <a href="{{url}}">{{title}}</a>
-      </h3>
+    <ul>
+      <li>
+       <a href="{{url}}">{{title}}</a>
+      </li>
       {{#is_post}}
       <ul>
         {{#tags}}<li>{{.}} </li>{{/tags}}
       </ul>
       {{/is_post}}
-    </article>
+    </ul>
   {{/entries}}
 </script>
 {% endraw %}

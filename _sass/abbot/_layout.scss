@@ -104,7 +104,7 @@ body {background-color: #FFF1C1}
 	background-color: #FFF1C1;
 	text-align: right;
 	ul {list-style-type: none;}
-	li {padding-right: 5px;}
+	li {padding-right: 5px; line-height: 1.2; font-style: italic;}
 	a { color: $text-color; text-decoration: none; &:hover, :visited {text-decoration: underline;}}
 	h2 {line-height: 1.3}
 	float: left;
@@ -194,7 +194,6 @@ body {background-color: #FFF1C1}
 /* End article */
 
 
-.placeholder {height: 2000px;}
 .wrapbox { // shows a white box
 	border: none;
 	display: block;
@@ -203,133 +202,11 @@ body {background-color: #FFF1C1}
 	h1, h2, h3, h4 {
 		font-family: $display-font-family;
 }
-	
-#diecanvas {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-	z-index: -1;
-    bottom: 0;
-    left: 0;
-}
-
-
-// Links are highlighted
-.stylized-list {
-	ul {list-style: none; margin: 0; padding: 0;} // Eliminate the 
-	li {margin-bottom: 5px;} // Fix the vertical rythmn
-	a {
-		text-decoration: none;
-		color: $text-color;
-		background-color: white;
-		padding: 4px;
-		&:hover {
-			text-decoration: none;
-			background-color: #FFF94E;
-			color: $text-color;
-		}}
-}
-
-// Title Bar
-.news-and-logogram {
-	@include grid(9, 3);
-	margin-bottom: $spacing-unit;
-	.news { 
-		h2 { 
-			font-size: $display-font-size;
-			font-weight: 600;
-			margin-top: $spacing-unit;}}
-	
-}
-
-/* Positioning */
-
-// Main content area
-.content-and-sidebar {
-	@include grid(9, 3);
-	.gallery {min-height: 60%;} // Just the front page
-	margin-bottom: $spacing-unit;
-	.sidelinks, .searchbox {margin: $spacing-unit;} // Responsive
-}
-
-.searchme {
-	margin-top: 0;
-	.search {
-	   padding:8px 15px;
-	   height: 30px;
-	   font-family: $monospace-font-family;
-	   font-size: 12pt;
-	   background:rgba(50, 50, 50, 0.2);
-	   border:0px solid #dbdbdb;}
-	.button {
-		position: relative;
-		top: -2px;
-		height: 30px;
-		border:2px solid #207cca;
-		background-color:#207cca;
-		color:#fafafa;}
-}
-
-.three-more-cols {
-	@include grid(8, 4);
-	.first {min-height: 200px; margin: $spacing-unit;}
-	margin-bottom: $spacing-unit;
-}
-
-// Footer
-.aminimalisticfooter {
-	@include grid(12);
-	strong {font-weight: 400;}
-	p {text-align: center; font-family: $monospace-font-family;}
-}
-
-// Page and Post background
-.page-two-content, .post-content {
-	display: block;
-	padding: $spacing-unit;
-	.post-title {
-		font-weight: 800;
-	}
-}
 
 // Search results
 #search-results {
-	margin-left: 7px;
-	h3 {font-family: $monospace-font-family !important};
-}
-.searchpage-searchbar {display: none;}
-// Hidden menubar
-.menushow {
-	margin: $spacing-unit * 2;
-}
-.menushowbutton {display: none;}
-/* Stretch and fit */
-
-@include media-query($on-laptop) {
-	.searchbox { display: none;}
-	.sidelinks { margin-left: none; display: none;}
-	.logogram {
-		h1,h2 {margin-left: $spacing-unit !important;}
-	}
-	.newsbox {margin-left: $spacing-unit;}
-	// The canvas
-	#diecanvas {height: 90%;}
-	// Hidden button
-	.menubarbutton {
-		display: block !important;
-		height: 40px;
-		float: right;
-		width: 40px;
-		border: none;
-		border-radius: 5px;
-		background-color: white;
-	}
-	// Show the search bar on the search page
-	.searchpage-searchbar {display: block;}
-	.menushowbutton {display: block;}
+	font-size: $base-font-size * 1.2;
+	font-family: $display-font-family;
 }
 
 

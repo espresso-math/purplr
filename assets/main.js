@@ -20,6 +20,7 @@ $(document).ready(function() {
   });
   $('.searchicon').click(function() {
     $('.searchmenu').slideToggle(100);
+    $('.searchmenu input').focus();
     return false;
   });
   $('.mobilesearch').click(function() {

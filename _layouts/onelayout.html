@@ -7,14 +7,14 @@
    	<main class="page-content" aria-label="Content">
       	<section class="menubar">
 	      	<div class="titlebox">
-	      		<a href="{{ "/" | relative_url }}"><strong>ISE</strong><br><strong>RC</strong></a>
+	      		{% if page.htmltitle %}{{ page.htmltitle }}{% endif %}{% if page.htmltitle==null %}<a href="{{ "/\" | relative_url }}"><strong>ISE</strong><br><strong>RC</strong></a>{% endif %}
 	      	</div>
 	      	<div class="menuitems">
 	      		<ul>
 	      			<li><a href="#">Alef <i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
-	      			<li><a href="#">Bet <i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
-	      			<li><a href="#">Gimel <i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
-	      			<li><a href="#">Dalet <i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
+	      			<li><a href="/math">Math <i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
+	      			<li><a href="/physics">Phy <i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
+	      			<li><a href="/chemistry">Chem <i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
 	      			<li><a href="#">He <i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
 	      		</ul>
 	      	</div>
@@ -24,15 +24,15 @@
 	    <div class="mobileitems">
 	      		<ul>
 	      			<li><a href="#">Alef</li>
-	      			<li><a href="#">Bet</li>
-	      			<li><a href="#">Gimel</li>
-	      			<li><a href="#">Dalet</li>
+	      			<li><a href="/math">Math</li>
+	      			<li><a href="/physics">Phy</li>
+	      			<li><a href="/chemistry">Chem</li>
 	      			<li><a href="#">He</a></li>
 	      			<li><a href="#" class="mobilesearch">Search</a></li>
 	      		</ul>
 	    </div>
 	    <div class="searchmenu">
-	    	<input type="text" placeholder="Type something...">
+	    	<form action="/search" method="get"><input type="text" id="search-query" name="q" placeholder="Type something..."></form>
 	    </div>
 	    <section class="news">
 	    	<h2>News & Updates</h2>
@@ -46,7 +46,6 @@
 	    	<blockquote>"Fight the power!"</blockquote>
 	    </section>
 	    <article class="onegoodarticle">
-	    	<h1>{{page.title}}</h1>
 	    	{{ content }}
 	    </article>
     </main>
