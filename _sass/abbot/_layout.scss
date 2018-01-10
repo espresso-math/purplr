@@ -13,6 +13,9 @@ strong { // Show a white highlight around text
 	padding-right: 10px;
 }
 body {background-color: #FFF1C1}
+li, p {
+	font-size: $base-font-size * 1.2;
+}
 
 /* Menubar STyLing */
 .titlebox {
@@ -99,12 +102,12 @@ body {background-color: #FFF1C1}
 
 /* News Section */
 .news {
-	font-size: 1.5em;
+	font-size: 1.5em !important;
 	width: 50%;
 	background-color: #FFF1C1;
 	text-align: right;
 	ul {list-style-type: none;}
-	li {padding-right: 5px; line-height: 1.2; font-style: italic;}
+	li {padding-right: 5px; line-height: 1.2; font-style: italic; font-size: 1em;}
 	a { color: $text-color; text-decoration: none; &:hover, :visited {text-decoration: underline;}}
 	h2 {line-height: 1.3}
 	float: left;

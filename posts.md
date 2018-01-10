@@ -1,14 +1,13 @@
 ---
-layout: post
+layout: onelayout
+title: List of all pages
 ---
 
-<h2><strong>All Notifications</strong></h2>
-<div class="stylized-list">
-		<ul>
-			{% for post in site.posts %} {% if post.newsfeed %}
-			<li>
-				<a href="{{ post.url }}"><i class="fa fa-hashtag" aria-hidden="true"></i> {{ post.title }}</a>
-			</li>
-			{% endif %}{% endfor %}
-		</ul>
-</div>
+## Post
+<ul>
+	{% for post in site.posts %}
+	<li>
+		<a href="{{ post.url }}">{{ post.title }}</a>
+	</li>
+	{% endfor %}
+</ul>
