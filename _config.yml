@@ -1,7 +1,7 @@
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username:
+github_username:  
 
 title: An (Un)official Website - Integrated Science Education and Research Centre (ISERC) 
 
@@ -11,4 +11,4 @@ iis_slider_array: []
 markdown: kramdown
 plugins:
   - jekyll-feed
-  - jekyll-lunr-js-search
+    #  - jekyll-lunr-js-search
